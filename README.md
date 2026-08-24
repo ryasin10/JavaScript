@@ -51,7 +51,7 @@ This course starts with the basic concepts and gradually combines them into smal
 
 The course follows this learning path:
 
-```text
+
 JavaScript Basics
        ↓
 DOM
