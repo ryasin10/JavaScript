@@ -29,7 +29,7 @@ functions, methods, and a small quiz project.
 13. [Section 9 --- Tic Tac Toe](#section-9--tic-tac-toe)
 14. [Quick Reference](#quick-reference)
 15. [Practice Checklist](#practice-checklist)
-16. [Resources](#resources)
+
 
 ------------------------------------------------------------------------
 
