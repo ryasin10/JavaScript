@@ -2080,19 +2080,3 @@ Use this checklist to review the course.
 
 ------------------------------------------------------------------------
 
-# Resources
-
--   **JavaScript First Steps Course:**
-    https://anjana.dev/javascript-first-steps/
--   **Tic Tac Toe Course Demo:**
-    https://anjana.dev/javascript-first-steps/1-tictactoe.html
--   **MDN Web Docs:** https://developer.mozilla.org/en-US/
-
-------------------------------------------------------------------------
-
-## Notes
-
-This README keeps the original course topics and examples while
-expanding the structure into a more complete study reference. The
-additional organization and explanations are intended to make the
-material easier to review and use as a GitHub learning resource.
