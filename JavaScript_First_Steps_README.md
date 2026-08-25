@@ -29,7 +29,6 @@ functions, methods, and a small quiz project.
 13. [Section 9 --- Tic Tac Toe](#section-9--tic-tac-toe)
 14. [Quick Reference](#quick-reference)
 15. [Practice Checklist](#practice-checklist)
-16. [Resources](#resources)
 
 ------------------------------------------------------------------------
 
@@ -2078,21 +2077,4 @@ Use this checklist to review the course.
                                       and DOM updates
   -----------------------------------------------------------------------
 
-------------------------------------------------------------------------
 
-# Resources
-
--   **JavaScript First Steps Course:**
-    https://anjana.dev/javascript-first-steps/
--   **Tic Tac Toe Course Demo:**
-    https://anjana.dev/javascript-first-steps/1-tictactoe.html
--   **MDN Web Docs:** https://developer.mozilla.org/en-US/
-
-------------------------------------------------------------------------
-
-## Notes
-
-This README keeps the original course topics and examples while
-expanding the structure into a more complete study reference. The
-additional organization and explanations are intended to make the
-material easier to review and use as a GitHub learning resource.
