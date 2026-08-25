@@ -1,79 +1,69 @@
 # JavaScript First Steps
 
-A practical learning guide to JavaScript fundamentals, based on the
-**JavaScript First Steps** course material and expanded with the
-exercises and notes collected during the training.
+A practical learning guide to JavaScript fundamentals, combining the original JavaScript First Steps README with the Day 2 learning guide.
 
-The guide starts with the basics of JavaScript and gradually moves into
-the DOM, values and data types, operators, expressions, arrays, objects,
-functions, methods, and a small quiz project.
+This README starts with the basics of JavaScript and gradually moves into the DOM, values and data types, operators, expressions, variables, arrays, objects, functions, methods, small projects, asynchronous JavaScript, APIs, promises, `fetch()`, `await`, destructuring, and URL processing.
 
-------------------------------------------------------------------------
+---
 
 ## Table of Contents
 
-1.  [Introduction](#introduction)
-2.  [Course Overview](#course-overview)
-3.  [What is JavaScript?](#what-is-javascript)
-4.  [Where to Write JavaScript](#where-to-write-javascript)
-5.  [Section 1 --- DOM](#section-1--dom-document-object-model)
-6.  [Section 2 --- Values and Data
-    Types](#section-2--values-and-data-types)
-7.  [Section 3 --- Operators](#section-3--operators)
-8.  [Section 4 --- Expressions and
-    Variables](#section-4--expressions-and-variables)
-9.  [Section 5 --- Arrays](#section-5--arrays)
-10. [Section 6 --- Objects](#section-6--objects)
-11. [Section 7 --- Functions](#section-7--functions)
-12. [Section 8 --- Quiz Project](#section-8--quiz-project)
-13. [Section 9 --- Tic Tac Toe](#section-9--tic-tac-toe)
-14. [Quick Reference](#quick-reference)
-15. [Practice Checklist](#practice-checklist)
+1. [Introduction](#introduction)
+2. [Course Overview](#course-overview)
+3. [What is JavaScript?](#what-is-javascript)
+4. [Where to Write JavaScript](#where-to-write-javascript)
+5. [DOM: Document Object Model](#dom-document-object-model)
+6. [Values and Data Types](#values-and-data-types)
+7. [Operators](#operators)
+8. [Expressions and Variables](#expressions-and-variables)
+9. [Arrays](#arrays)
+10. [Objects](#objects)
+11. [Functions](#functions)
+12. [Quiz Project](#quiz-project)
+13. [Tic Tac Toe](#tic-tac-toe)
+14. [Day 2: DOM, Objects, Functions, APIs, and Async JavaScript](#day-2-dom-objects-functions-apis-and-async-javascript)
+15. [Quick Reference](#quick-reference)
+16. [Common Beginner Mistakes](#common-beginner-mistakes)
+17. [Practice Checklist](#practice-checklist)
 
-------------------------------------------------------------------------
+---
 
-# Introduction
+## Introduction
 
-JavaScript is one of the main technologies used to build interactive
-websites.
+JavaScript is one of the main technologies used to build interactive websites.
 
-HTML provides the structure of a page, CSS controls its appearance, and
-JavaScript adds behavior and interactivity.
+HTML provides the structure of a page, CSS controls its appearance, and JavaScript adds behavior and interactivity.
 
-This guide assumes basic knowledge of HTML and CSS. No previous
-JavaScript experience is required.
-
-### What you will learn
+This guide assumes basic knowledge of HTML and CSS. No previous JavaScript experience is required.
 
 By the end of this guide, you should understand how to:
 
--   Run JavaScript in a browser.
--   Use the browser console.
--   Select HTML elements with JavaScript.
--   Read and change page content.
--   Work with strings, numbers, booleans, `undefined`, and `null`.
--   Use arithmetic and comparison operators.
--   Declare and use variables.
--   Understand expressions and statements.
--   Work with arrays and array methods.
--   Understand references and mutability.
--   Create and modify objects.
--   Use object methods and `this`.
--   Work with nested objects.
--   Create and call functions.
--   Understand parameters and arguments.
--   Connect JavaScript logic to the DOM.
--   Build a small interactive quiz.
--   Understand how arrays, objects, functions, and the DOM can work
-    together in a project.
+- Run JavaScript in a browser.
+- Use the browser console.
+- Select HTML elements with JavaScript.
+- Read and change page content.
+- Work with strings, numbers, booleans, `undefined`, and `null`.
+- Use arithmetic and comparison operators.
+- Declare and use variables.
+- Understand expressions and statements.
+- Work with arrays and array methods.
+- Understand references and mutability.
+- Create and modify objects.
+- Use object methods and `this`.
+- Work with nested objects.
+- Create and call functions.
+- Understand parameters and arguments.
+- Connect JavaScript logic to the DOM.
+- Build a small interactive quiz.
+- Understand how arrays, objects, functions, and the DOM work together.
+- Use timers, promises, `fetch()`, `await`, and destructuring.
+- Read data from an API and update the page with the result.
 
-------------------------------------------------------------------------
+---
 
-# Course Overview
+## Course Overview
 
-The learning path follows a gradual progression:
-
-``` text
+```text
 JavaScript Basics
       ↓
 DOM
@@ -95,127 +85,106 @@ DOM + Logic
 Quiz Project
       ↓
 Tic Tac Toe
+      ↓
+Timers, APIs, Promises, and Async JavaScript
 ```
 
-The goal is not only to memorize syntax, but to understand how
-JavaScript represents data and how that data can be used to control a
-web page.
+The goal is not only to memorize syntax, but to understand how JavaScript represents data and how that data can control a web page.
 
-------------------------------------------------------------------------
+---
 
-# What is JavaScript?
+## What is JavaScript?
 
-JavaScript (JS) is a **high-level, dynamically typed programming
-language**.
+JavaScript is a high-level, dynamically typed programming language.
 
 It is widely used in web browsers to make pages interactive.
 
 JavaScript can:
 
--   Read HTML elements.
--   Change text and styles.
--   React to user actions.
--   Store and process data.
--   Perform calculations.
--   Work with arrays and objects.
--   Create reusable functions.
--   Communicate with other systems.
--   Run outside the browser through environments such as Node.js.
+- Read HTML elements.
+- Change text and styles.
+- React to user actions.
+- Store and process data.
+- Perform calculations.
+- Work with arrays and objects.
+- Create reusable functions.
+- Communicate with other systems.
+- Run outside the browser through environments such as Node.js.
 
-JavaScript is standardized as **ECMAScript**. The language was created
-in 1995 by **Brendan Eich**.
+JavaScript is standardized as ECMAScript. The language was created in 1995 by Brendan Eich.
 
-### First JavaScript statement
+### First JavaScript Statement
 
-``` js
+```js
 console.log("Hello, JavaScript!");
 ```
 
 `console.log()` prints a value or message to the browser console.
 
-------------------------------------------------------------------------
+---
 
-# Where to Write JavaScript
+## Where to Write JavaScript
 
 There are three common ways to run JavaScript.
 
-## 1. Browser DevTools Console
+### 1. Browser DevTools Console
 
 The console is useful for quick experiments.
 
-Open a web page and:
-
-``` text
-Right-click → Inspect → Console
+```text
+Right-click -> Inspect -> Console
 ```
 
 Then try:
 
-``` js
+```js
 console.log("Hello!");
 ```
 
-The console is especially useful while learning because you can
-immediately see the result of an expression.
-
-------------------------------------------------------------------------
-
-## 2. Inline JavaScript
+### 2. Inline JavaScript
 
 JavaScript can be written directly inside an HTML `<script>` element.
 
-``` html
+```html
 <script>
   console.log("Hello from inline JavaScript");
 </script>
 ```
 
-This is useful for simple examples, but larger projects are easier to
-maintain when JavaScript is separated from HTML.
-
-------------------------------------------------------------------------
-
-## 3. External JavaScript File
+### 3. External JavaScript File
 
 A JavaScript file can be connected to an HTML page.
 
-``` html
+```html
 <script src="app.js"></script>
 ```
 
 Then `app.js` can contain:
 
-``` js
+```js
 console.log("Hello from app.js");
 ```
 
-### Recommended structure
+Recommended structure:
 
-``` text
+```text
 project/
 ├── index.html
 ├── style.css
 └── app.js
 ```
 
-Keeping HTML, CSS, and JavaScript separated makes projects easier to
-organize and maintain.
+Keeping HTML, CSS, and JavaScript separated makes projects easier to organize and maintain.
 
-------------------------------------------------------------------------
+---
 
-# Section 1 --- DOM (Document Object Model)
+## DOM: Document Object Model
 
-## What is the DOM?
+The Document Object Model, or DOM, is the browser's representation of an HTML document.
 
-The **Document Object Model (DOM)** is a tree-like representation of an
-HTML document.
+The browser turns HTML elements into objects/nodes that JavaScript can access and manipulate.
 
-The browser turns HTML elements into objects/nodes that JavaScript can
-access and manipulate.
-
-For example:
-
-``` text
+```text
 document
 └── html
     ├── head
@@ -226,114 +195,126 @@ document
 
 JavaScript can use the DOM to:
 
--   Find elements.
--   Read their content.
--   Change their content.
--   Change styles.
--   Add or remove classes.
--   Respond to user events.
+- Find elements.
+- Read their content.
+- Change their content.
+- Change styles.
+- Add or remove classes.
+- Respond to user events.
 
-------------------------------------------------------------------------
+### Selecting Elements
 
-## Selecting Elements
-
-### `querySelector()`
+#### `querySelector()`
 
 Selects the first element that matches a CSS selector.
 
-``` js
+```js
 const title = document.querySelector("h1");
 ```
 
 It can also use IDs and classes:
 
-``` js
+```js
 document.querySelector("#title");
 document.querySelector(".card");
 ```
 
-------------------------------------------------------------------------
-
-### `querySelectorAll()`
+#### `querySelectorAll()`
 
 Selects all elements that match a CSS selector.
 
-``` js
+```js
 const paragraphs = document.querySelectorAll("p");
 ```
 
 The result is a `NodeList`.
 
-------------------------------------------------------------------------
-
-### `getElementById()`
+#### `getElementById()`
 
 Selects an element using its ID.
 
-``` js
+```js
 const title = document.getElementById("title");
 ```
 
-------------------------------------------------------------------------
+The ID is passed without `#`.
 
-### `getElementsByTagName()`
+```js
+document.getElementById("title"); // correct
+document.querySelector("#title"); // correct with querySelector
+```
+
+#### `getElementsByTagName()`
 
 Selects elements by tag name.
 
-``` js
+```js
 const items = document.getElementsByTagName("li");
 ```
 
-------------------------------------------------------------------------
-
-### `getElementsByClassName()`
+#### `getElementsByClassName()`
 
 Selects elements by class name.
 
-``` js
+```js
 const cards = document.getElementsByClassName("card");
 ```
 
-------------------------------------------------------------------------
+### Selection Comparison
 
-## `.length`
+| Method | Purpose |
+| --- | --- |
+| `getElementById()` | Select one element by ID |
+| `getElementsByTagName()` | Select elements by tag name |
+| `getElementsByClassName()` | Select elements by class name |
+| `querySelector()` | Select the first CSS selector match |
+| `querySelectorAll()` | Select all CSS selector matches |
 
-`.length` can be used to find how many elements were returned by many
-DOM collection methods.
+### `.length` with DOM Collections
 
-``` js
+`.length` gives the number of items in a collection.
+
+```js
 const items = document.querySelectorAll("li");
-
 console.log(items.length);
 ```
 
-------------------------------------------------------------------------
+The same idea works with class selections:
 
-## `.textContent`
+```js
+const buttons = document.getElementsByClassName("choice");
+console.log(buttons.length);
+```
+
+### `.textContent`
 
 `.textContent` reads or changes the text inside an element.
 
 Read text:
 
-``` js
+```js
 const title = document.querySelector("h1");
-
 console.log(title.textContent);
 ```
 
 Change text:
 
-``` js
+```js
 title.textContent = "New Title";
 ```
 
-------------------------------------------------------------------------
+It is a property, not a function:
 
-## Changing a Web Page
+```js
+title.textContent = "New text"; // correct
+title.textContent();            // incorrect
+```
+
+### Changing a Web Page
 
 JavaScript can modify an element after selecting it.
 
-``` js
+```js
 const title = document.querySelector("h1");
 
 title.textContent = "New Title";
@@ -341,13 +322,33 @@ title.style.color = "blue";
 title.classList.add("highlight");
 ```
 
-------------------------------------------------------------------------
+### DOM Refresh Behavior
 
-## Events
+DOM changes made by JavaScript normally affect the current page in memory.
+
+```js
+document.body.style.backgroundColor = "black";
+```
+
+If the page is refreshed, the browser loads the original HTML and CSS again, so a temporary JavaScript-only DOM change is normally lost unless the application stores the change somewhere persistent.
+
+```text
+JavaScript changes DOM
+        ↓
+Current page changes
+        ↓
+Refresh
+        ↓
+Original document is loaded again
+        ↓
+Temporary DOM change disappears
+```
+
+### Events
 
 JavaScript can react to user actions such as clicks.
 
-``` js
+```js
 const button = document.querySelector("#submit-btn");
 
 button.addEventListener("click", function () {
@@ -357,15 +358,15 @@ button.addEventListener("click", function () {
 
 The general pattern is:
 
-``` js
+```js
 element.addEventListener("event", function () {
   // code to run
 });
 ```
 
-Common events include:
+Common events:
 
-``` text
+```text
 click
 input
 change
@@ -374,96 +375,61 @@ mouseover
 keydown
 ```
 
-------------------------------------------------------------------------
+---
 
-## DOM Exercise
-
-**Task:** Select every `<li>` on the page and print the number of items.
-
-``` js
-const items = document.querySelectorAll("li");
-
-console.log(items.length);
-```
-
-------------------------------------------------------------------------
-
-## DOM Refresh Behavior
-
-DOM changes made by JavaScript normally affect the current page in
-memory.
-
-For example:
-
-``` js
-document.body.style.backgroundColor = "black";
-```
-
-If the page is refreshed, the browser loads the original HTML and CSS
-again, so a temporary JavaScript DOM change is normally lost unless the
-application stores the change somewhere persistent.
-
-------------------------------------------------------------------------
-
-# Section 2 --- Values and Data Types
+## Values and Data Types
 
 JavaScript works with different kinds of values.
 
-Important primitive data types introduced in this course include:
+| Type | Example |
+| --- | --- |
+| String | `"hello"` |
+| Number | `42`, `3.14` |
+| Boolean | `true`, `false` |
+| Undefined | `undefined` |
+| Null | `null` |
 
-  Type        Example
-  ----------- -----------------
-  String      `"hello"`
-  Number      `42`, `3.14`
-  Boolean     `true`, `false`
-  Undefined   `undefined`
-  Null        `null`
+### `typeof`
 
-------------------------------------------------------------------------
+The `typeof` operator can inspect the type of a value.
 
-## `typeof`
-
-The `typeof` operator can be used to inspect the type of a value.
-
-``` js
-typeof "hello";     // "string"
-typeof 42;          // "number"
-typeof true;        // "boolean"
-typeof undefined;   // "undefined"
+```js
+typeof "hello";   // "string"
+typeof 42;        // "number"
+typeof true;      // "boolean"
+typeof undefined; // "undefined"
 ```
 
 A well-known JavaScript behavior is:
 
-``` js
-typeof null;        // "object"
+```js
+typeof null; // "object"
 ```
 
 This is a historical JavaScript quirk.
 
 Arrays and ordinary objects also report:
 
-``` js
-typeof [1, 2, 3];   // "object"
-typeof {};          // "object"
+```js
+typeof [1, 2, 3]; // "object"
+typeof {};        // "object"
 ```
 
-------------------------------------------------------------------------
-
-## Strings
+### Strings
 
 A string represents text.
 
 JavaScript supports:
 
-``` js
-"double quotes"
-'single quotes'
-`template literals`
+```js
+"double quotes";
+'single quotes';
+`template literals`;
 ```
 
 Example:
 
-``` js
+```js
 const greeting = "Hello";
 
 console.log(greeting.length);
@@ -472,244 +438,111 @@ console.log(greeting[0]);
 
 Output:
 
-``` text
+```text
 5
 H
 ```
 
 String indexes start at `0`.
 
-``` text
+```text
 H e l l o
 0 1 2 3 4
 ```
 
-------------------------------------------------------------------------
+### Useful String Methods
 
-## Useful String Methods
-
-### `.length`
-
-``` js
-const name = "Shahd";
-
-console.log(name.length);
-```
-
-### `.indexOf()`
-
-Returns the position of a matching substring.
-
-``` js
+```js
 const phrase = "JavaScript is fun";
 
+phrase.length;
 phrase.indexOf("is");
-```
-
-### `.includes()`
-
-Checks whether a string contains another string.
-
-``` js
-phrase.includes("fun"); // true
-```
-
-### `.startsWith()`
-
-Checks whether a string starts with a particular value.
-
-``` js
-phrase.startsWith("Java"); // true
-```
-
-### `.toLowerCase()`
-
-Converts the string to lowercase.
-
-``` js
+phrase.includes("fun");
+phrase.startsWith("Java");
 phrase.toLowerCase();
 ```
 
-------------------------------------------------------------------------
+Strings are primitive values. Methods such as `.toUpperCase()` return a new value instead of changing the original string automatically.
 
-## String Exercise
+```js
+const word = "hello";
 
-Given:
+word.toUpperCase();
 
-``` js
-const name = "Shahd";
+console.log(word); // "hello"
 ```
 
-Print the length and check whether the name includes `"a"`.
+---
 
-``` js
-console.log(name.length);
-console.log(name.includes("a"));
-```
-
-------------------------------------------------------------------------
-
-# Section 3 --- Operators
+## Operators
 
 Operators allow JavaScript to perform calculations and comparisons.
 
-## Arithmetic Operators
+### Arithmetic Operators
 
-``` js
-5 + 3;    // 8
-5 - 3;    // 2
-5 * 3;    // 15
-5 / 3;    // 1.666...
-5 % 3;    // 2
-2 ** 3;   // 8
+```js
+5 + 3;  // 8
+5 - 3;  // 2
+5 * 3;  // 15
+5 / 3;  // 1.666...
+5 % 3;  // 2
+2 ** 3; // 8
 ```
 
-  Operator   Meaning
-  ---------- --------------------
-  `+`        Addition
-  `-`        Subtraction
-  `*`        Multiplication
-  `/`        Division
-  `%`        Remainder / modulo
-  `**`       Exponentiation
+| Operator | Meaning |
+| --- | --- |
+| `+` | Addition |
+| `-` | Subtraction |
+| `*` | Multiplication |
+| `/` | Division |
+| `%` | Remainder / modulo |
+| `**` | Exponentiation |
 
-------------------------------------------------------------------------
-
-## Operator Exercise
-
-Calculate the area of a rectangle.
-
-``` js
-const width = 4;
-const height = 7;
-
-const area = width * height;
-
-console.log(area);
-```
-
-Result:
-
-``` text
-28
-```
-
-------------------------------------------------------------------------
-
-## Comparison Operators
+### Comparison Operators
 
 Comparison operators produce a boolean result.
 
-``` js
-5 > 3;     // true
-5 < 3;     // false
-5 >= 5;    // true
-5 <= 4;    // false
+```js
+5 > 3;  // true
+5 < 3;  // false
+5 >= 5; // true
+5 <= 4; // false
 ```
 
-------------------------------------------------------------------------
-
-## Equality
-
-JavaScript provides loose and strict equality.
-
-### Loose equality
-
-``` js
-5 == "5"; // true
-```
+### Equality
 
 Loose equality can convert types before comparing.
 
-### Strict equality
-
-``` js
-5 === "5"; // false
+```js
+5 == "5"; // true
 ```
 
 Strict equality checks both value and type.
 
-### Strict inequality
-
-``` js
+```js
+5 === "5"; // false
 5 !== "5"; // true
 ```
 
-### Best Practice
+Best practice: prefer `===` and `!==` because strict comparisons reduce unexpected type conversion.
 
-Prefer:
+---
 
-``` js
-===
-!==
+## Expressions and Variables
+
+An expression is a piece of code that produces a value.
+
+```js
+3 + 4;     // 7
+"a" + "b"; // "ab"
+age > 18; // true or false
 ```
 
-over:
-
-``` js
-==
-!=
-```
-
-because strict comparisons reduce unexpected type conversion.
-
-------------------------------------------------------------------------
-
-# Section 4 --- Expressions and Variables
-
-## What is an Expression?
-
-An **expression** is a piece of code that produces a value.
-
-Examples:
-
-``` js
-3 + 4;
-```
-
-produces:
-
-``` text
-7
-```
-
-Another example:
-
-``` js
-"a" + "b";
-```
-
-produces:
-
-``` text
-"ab"
-```
-
-Comparison expressions also produce values:
-
-``` js
-age > 18;
-```
-
-produces either:
-
-``` text
-true
-```
-
-or:
-
-``` text
-false
-```
-
-------------------------------------------------------------------------
-
-## Declaring and Assigning Variables
+### Declaring and Assigning Variables
 
 A variable can be declared first and assigned later:
 
-``` js
+```js
 let age;
 
 age = 20;
@@ -717,132 +550,59 @@ age = 20;
 
 Or both can happen together:
 
-``` js
+```js
 let name = "Ali";
 ```
 
-------------------------------------------------------------------------
-
-## `let`
+### `let`
 
 `let` allows a variable to be reassigned.
 
-``` js
+```js
 let age = 20;
-
 age = 21;
 ```
 
-------------------------------------------------------------------------
+### `const`
 
-## `const`
+`const` requires an initial value and prevents reassignment of the variable.
 
-`const` requires an initial value and prevents reassignment of the
-variable.
-
-``` js
+```js
 const pi = 3.14159;
 ```
 
 This is not allowed:
 
-``` js
-const pi = 3.14159;
-
+```js
 pi = 4; // TypeError
 ```
 
-------------------------------------------------------------------------
+### Statements vs Expressions
 
-## Variables Exercise
+An expression produces a value:
 
-``` js
-let favoriteColor = "teal";
-
-console.log(favoriteColor);
-```
-
-------------------------------------------------------------------------
-
-## What are Variables?
-
-Variables are named references used to store or access values so the
-values can be reused in a program.
-
-``` js
-const score = 8;
-
-console.log(score);
-```
-
-The name `score` gives the program a way to refer to the value.
-
-------------------------------------------------------------------------
-
-## Evaluating Code
-
-JavaScript evaluates nested expressions so that inner operations can
-contribute to the final result.
-
-``` js
-const result = (2 + 3) * (4 - 1);
-```
-
-Conceptually:
-
-``` text
-(2 + 3) * (4 - 1)
-     ↓       ↓
-     5   *   3
-         ↓
-        15
-```
-
-------------------------------------------------------------------------
-
-## Statements vs Expressions
-
-### Expression
-
-Produces a value:
-
-``` js
+```js
 3 + 4;
-```
-
-``` js
 age > 18;
 ```
 
-### Statement
+A statement performs an action or controls execution.
 
-Performs an action or controls execution.
-
-``` js
+```js
 if (age > 18) {
   console.log("adult");
 }
 ```
 
-The `if` structure is a statement, while:
+---
 
-``` js
-age > 18
-```
-
-is an expression inside it.
-
-------------------------------------------------------------------------
-
-# Section 5 --- Arrays
-
-## What is an Array?
+## Arrays
 
 An array is an ordered collection of values.
 
 Indexes start at `0`.
 
-``` js
+```js
 const fruits = ["apple", "banana", "cherry"];
 
 console.log(fruits[0]);
@@ -851,196 +611,65 @@ console.log(fruits.length);
 
 Output:
 
-``` text
+```text
 apple
 3
 ```
 
 Array indexes:
 
-``` text
+```text
 apple   banana   cherry
   0       1        2
 ```
 
-------------------------------------------------------------------------
+### Useful Array Methods
 
-## Useful Array Methods
-
-``` js
+```js
 const nums = [1, 2, 3];
+
+nums.push(4);       // add to end
+nums.pop();         // remove from end
+nums.unshift(0);    // add to beginning
+nums.shift();       // remove from beginning
+nums.includes(2);   // check for value
+nums.join("-");     // combine into string
+nums.slice(0, 2);   // copy part of array
 ```
 
-### `push()`
+### Array Mutability and `const`
 
-Adds an item to the end.
-
-``` js
-nums.push(4);
-```
-
-Result:
-
-``` js
-[1, 2, 3, 4]
-```
-
-### `pop()`
-
-Removes the last item.
-
-``` js
-nums.pop();
-```
-
-### `unshift()`
-
-Adds an item to the beginning.
-
-``` js
-nums.unshift(0);
-```
-
-### `shift()`
-
-Removes the first item.
-
-``` js
-nums.shift();
-```
-
-### `includes()`
-
-Checks whether an array contains a value.
-
-``` js
-nums.includes(2);
-```
-
-### `join()`
-
-Combines array elements into a string.
-
-``` js
-nums.join("-");
-```
-
-Example:
-
-``` text
-"1-2-3"
-```
-
-### `slice()`
-
-Returns part of an array without changing the original array.
-
-``` js
-nums.slice(0, 2);
-```
-
-Result:
-
-``` js
-[1, 2]
-```
-
-------------------------------------------------------------------------
-
-## Array Mutability and `const`
-
-A very important concept:
-
-> `const` prevents reassignment of the variable, but it does not make
-> the contents of an array immutable.
+`const` prevents reassignment of the variable, but it does not make the contents of an array immutable.
 
 This is allowed:
 
-``` js
+```js
 const colors = ["red", "green"];
 
 colors.push("blue");
-
-console.log(colors);
 ```
 
-Result:
+This is not allowed:
 
-``` js
-["red", "green", "blue"]
-```
-
-But this is not allowed:
-
-``` js
+```js
 colors = ["yellow"];
 ```
 
-because the variable itself cannot be reassigned.
+### Shared References
 
-### Key idea
-
-``` text
-const
-  ↓
-protects the reference
-  ↓
-does not automatically freeze the array contents
-```
-
-------------------------------------------------------------------------
-
-## Array Example
-
-``` js
-const operands = [4, 6];
-
-const sum = operands[0] + operands[1];
-
-console.log(sum); // 10
-
-operands[0] = 5;
-
-const newSum = operands[0] + operands[1];
-
-console.log(newSum); // 11
-```
-
-The array can still be modified even though it was declared with
-`const`.
-
-------------------------------------------------------------------------
-
-## Shared References
-
-Consider:
-
-``` js
+```js
 let array1 = [1, 2, 3];
-
 let array2 = array1;
-```
 
-`array2` does not create an independent copy of the array.
+array1[1] = 4;
+
+console.log(array1); // [1, 4, 3]
+console.log(array2); // [1, 4, 3]
+```
 
 Both variables refer to the same array.
 
-``` js
-array1[1] = 4;
-
-console.log(array1);
-console.log(array2);
-```
-
-Both show:
-
-``` js
-[1, 4, 3]
-```
-
-### Visual model
-
-``` text
+```text
 array1 ───────┐
               ↓
           [1, 4, 3]
@@ -1048,30 +677,13 @@ array1 ───────┐
 array2 ───────┘
 ```
 
-------------------------------------------------------------------------
+---
 
-## Mutable and Immutable Data
+## Objects
 
-Understanding mutability helps reduce unexpected changes.
+Objects group related values together using properties.
 
-Immutable data is useful because it can:
-
--   Reduce unexpected changes.
--   Make code easier to reason about.
--   Reduce the likelihood of bugs.
--   Make program behavior more predictable.
-
-------------------------------------------------------------------------
-
-# Section 6 --- Objects
-
-## What is an Object?
-
-Objects group related values together using **properties**.
-
-Example:
-
-``` js
+```js
 const js = {
   name: "JavaScript",
   abbreviation: "JS",
@@ -1084,53 +696,22 @@ const js = {
 
 A property has a key and a value:
 
-``` text
-name → "JavaScript"
-abbreviation → "JS"
-birthYear → 1995
+```text
+name -> "JavaScript"
+abbreviation -> "JS"
+birthYear -> 1995
 ```
 
-------------------------------------------------------------------------
+### Accessing Object Properties
 
-## Accessing Object Properties
-
-Dot notation:
-
-``` js
-console.log(js.name);
+```js
+console.log(js.name); // JavaScript
+console.log(js.birthYear);
 ```
 
-Output:
+### Modifying and Adding Properties
 
-``` text
-JavaScript
-```
-
-Another example:
-
-``` js
-js.birthYear;
-```
-
-------------------------------------------------------------------------
-
-## Modifying and Adding Properties
-
-Existing properties can be changed:
-
-``` js
-indecisive.lunch = "tacos";
-```
-
-New properties can be added:
-
-``` js
-indecisive.snack = "chips";
-```
-
-Example:
-
-``` js
+```js
 const indecisive = {
   lunch: "sandwich"
 };
@@ -1139,31 +720,20 @@ indecisive.lunch = "tacos";
 indecisive.snack = "chips";
 ```
 
-------------------------------------------------------------------------
-
-## Objects and Arrays
+### Objects and Arrays
 
 Arrays are objects in JavaScript.
 
-``` js
-typeof { snack: "chips" };
-// "object"
-
-typeof ["chips"];
-// "object"
+```js
+typeof { snack: "chips" }; // "object"
+typeof ["chips"];          // "object"
 ```
 
-This does not mean arrays and ordinary objects behave identically.
-Arrays have special behavior and methods designed for ordered
-collections.
+Arrays have special behavior and methods designed for ordered collections.
 
-------------------------------------------------------------------------
+### Nested Objects and Arrays
 
-## Objects Exercise
-
-Create an object representing a person.
-
-``` js
+```js
 const anjana = {
   name: "Anjana",
   home: "San Francisco",
@@ -1172,22 +742,35 @@ const anjana = {
   vehicle: "Vespa",
   hobbies: ["travel", "climbing", "gaming", "lindy hop"]
 };
-```
 
-You can access nested array values:
-
-``` js
 anjana.languages[0];
 anjana.hobbies[2];
 ```
 
-------------------------------------------------------------------------
+Another example:
 
-# Object Methods
+```js
+const menu = {
+  lunch: {
+    appetizer: "salad",
+    main: "spaghetti",
+    dessert: "tiramisu"
+  },
+  dinner: {
+    appetizer: "samosa",
+    main: "saag paneer",
+    dessert: "gulab jamun"
+  }
+};
 
-A function stored as an object property is called a **method**.
+const tiramisu = menu.lunch.dessert;
+```
 
-``` js
+### Object Methods
+
+A function stored as an object property is called a method.
+
+```js
 const dog = {
   name: "Ein",
   breed: "Corgi",
@@ -1196,423 +779,192 @@ const dog = {
     console.log("woof woof");
   }
 };
-```
 
-Call the method:
-
-``` js
 dog.speak();
 ```
 
-Output:
+### The `this` Keyword
 
-``` text
-woof woof
-```
+Inside an object method, `this` can refer to the object on which the method is called.
 
-------------------------------------------------------------------------
+```js
+const user = {
+  name: "Ali",
 
-## The `this` Keyword
-
-Inside an object method, `this` can refer back to the object on which
-the method is called.
-
-``` js
-anjana.speak = function () {
-  console.log("Hi my name is", this.name);
+  greet: function () {
+    console.log("Hi my name is", this.name);
+  }
 };
 
-anjana.speak();
+user.greet();
 ```
 
-Output:
-
-``` text
-Hi my name is Anjana
-```
-
-Here:
-
-``` js
-this.name
-```
-
-refers to the `name` property of the object used to call the method.
-
-------------------------------------------------------------------------
-
-## Object Methods Exercise
-
-Add a `greet` method to the `dog` object.
-
-``` js
-dog.greet = function () {
-  console.log("Hi, I'm " + this.name + "!");
-};
-
-dog.greet();
-```
-
-Output:
-
-``` text
-Hi, I'm Ein!
-```
-
-------------------------------------------------------------------------
-
-# Built-In Objects
+### Built-In Objects
 
 JavaScript provides built-in objects and utilities.
 
-## `Math`
+```js
+Math.max(3, 7, 2); // 7
+Math.round(4.6);   // 5
 
-``` js
-Math.max(3, 7, 2);
-// 7
-
-Math.round(4.6);
-// 5
-```
-
-------------------------------------------------------------------------
-
-## `Date`
-
-``` js
 const now = new Date();
 
-console.log(now);
+JSON.stringify({ a: 1 }); // '{"a":1}'
 ```
 
-------------------------------------------------------------------------
+### `Object.freeze()`
 
-## `JSON`
+`Object.freeze()` prevents changes to an object's own existing properties. It prevents adding, changing, or deleting those properties.
 
-Objects can be converted to JSON strings.
+```js
+const user = {
+  name: "Ali",
+  age: 22
+};
 
-``` js
-JSON.stringify({ a: 1 });
+Object.freeze(user);
+
+user.name = "Omar";
+
+console.log(user.name); // "Ali"
+console.log(Object.isFrozen(user)); // true
 ```
 
-Result:
+#### `const` vs `Object.freeze()`
 
-``` text
-'{"a":1}'
-```
+These are different:
 
-------------------------------------------------------------------------
-
-## `Object.freeze()`
-
-`Object.freeze()` prevents changes to an object.
-
-``` js
+```js
 const user = {
   name: "Ali"
 };
 
-Object.freeze(user);
+user.name = "Omar"; // allowed
 ```
 
-After freezing, the object cannot normally have its properties added,
-changed, or deleted.
+`const` prevents reassignment of the variable reference. `Object.freeze()` prevents changes to the object's own properties.
 
-``` text
-Object.freeze()
-      ↓
-prevents property changes
-prevents adding properties
-prevents deleting properties
-```
+#### Shallow Freeze
 
-------------------------------------------------------------------------
+`Object.freeze()` is shallow. A nested object is not automatically frozen.
 
-## Console Methods
-
-### `console.log()`
-
-``` js
-console.log("Hello");
-```
-
-Used for normal console output.
-
-### `console.warn()`
-
-``` js
-console.warn("Something may be wrong");
-```
-
-Used for warning messages.
-
-------------------------------------------------------------------------
-
-# Strings as Primitive Values
-
-Strings are primitive values.
-
-JavaScript allows string methods such as:
-
-``` js
-const text = "JavaScript";
-
-text.length;
-text.indexOf("Script");
-```
-
-JavaScript temporarily provides string-object behavior so methods can be
-used on the primitive string.
-
-The original string value remains immutable.
-
-For example:
-
-``` js
-const word = "hello";
-
-word.toUpperCase();
-
-console.log(word);
-```
-
-The original `word` value is not changed automatically.
-
-------------------------------------------------------------------------
-
-# Nested Objects
-
-Objects can contain other objects.
-
-``` js
-const menu = {
-  lunch: {
-    appetizer: "salad",
-    main: "spaghetti",
-    dessert: "tiramisu"
-  },
-
-  dinner: {
-    appetizer: "samosa",
-    main: "saag paneer",
-    dessert: "gulab jamun"
+```js
+const user = {
+  name: "Ali",
+  address: {
+    city: "Jenin"
   }
 };
+
+Object.freeze(user);
+
+user.address.city = "Nablus"; // nested object can still change
 ```
 
-Accessing nested properties:
+---
 
-``` js
-const tiramisu = menu.lunch.dessert;
-
-console.log(tiramisu);
-```
-
-Result:
-
-``` text
-tiramisu
-```
-
-------------------------------------------------------------------------
-
-## Nested Arrays and Objects
-
-An object can contain arrays, and arrays can contain objects.
-
-Example:
-
-``` js
-const spiceGirls = {
-  motto: "Girl Power",
-
-  members: [
-    { name: "Mel B", nickname: "Scary" },
-    { name: "Geri", nickname: "Ginger" },
-    { name: "Mel C", nickname: "Sporty" },
-    { name: "Emma", nickname: "Baby" },
-    { name: "Victoria", nickname: "Posh" }
-  ],
-
-  albums: ["Spice", "Spiceworld"]
-};
-```
-
-Examples:
-
-``` js
-spiceGirls.motto;
-```
-
-``` js
-spiceGirls.members[1];
-```
-
-``` js
-spiceGirls.albums[1];
-```
-
-``` js
-spiceGirls.members[4].name;
-```
-
-The last expression accesses:
-
-``` text
-object
-  ↓
-members array
-  ↓
-index 4
-  ↓
-name property
-```
-
-------------------------------------------------------------------------
-
-# Section 7 --- Functions
+## Functions
 
 Functions allow us to group reusable instructions.
 
-## Basic Function
+### Basic Function
 
-``` js
+```js
 function greet() {
   console.log("Hello!");
 }
-```
 
-Call the function:
-
-``` js
 greet();
 ```
 
-------------------------------------------------------------------------
-
-## Parameters and Arguments
+### Parameters and Arguments
 
 A function can receive information through parameters.
 
-``` js
+```js
 function greet(name) {
   console.log("Hello " + name);
 }
-```
 
-Calling the function:
-
-``` js
 greet("Reem");
 ```
 
 Here:
 
--   `name` is the **parameter**.
--   `"Reem"` is the **argument**.
+- `name` is the parameter.
+- `"Reem"` is the argument.
 
-------------------------------------------------------------------------
+### Multiple Parameters
 
-## Multiple Parameters
-
-``` js
+```js
 function add(a, b) {
   return a + b;
 }
 
 const result = add(3, 4);
 
-console.log(result);
+console.log(result); // 7
 ```
 
-Result:
+### Fewer Arguments Than Parameters
 
-``` text
-7
-```
+JavaScript allows a function to be called with fewer arguments than the number of declared parameters.
 
-------------------------------------------------------------------------
-
-## Fewer Arguments
-
-JavaScript allows a function to be called with fewer arguments than the
-number of declared parameters.
-
-For example:
-
-``` js
+```js
 function add(a, b) {
   return a + b;
 }
 
-add(5);
+console.log(add(5));
 ```
 
-The missing parameter receives:
+The values are:
 
-``` js
-undefined
+```text
+a -> 5
+b -> undefined
 ```
 
-Therefore the result involves `undefined`:
+Therefore:
 
-``` js
-5 + undefined
+```text
+5 + undefined -> NaN
 ```
 
-which produces:
+JavaScript does not automatically throw an error simply because an argument is missing. The missing parameter receives `undefined`.
 
-``` text
-NaN
-```
+### Function Returning a Value
 
-This is important when understanding how JavaScript handles function
-arguments.
-
-------------------------------------------------------------------------
-
-## Function Returning a Value
-
-``` js
+```js
 function square(number) {
   return number * number;
 }
 
 const result = square(5);
 
-console.log(result);
+console.log(result); // 25
 ```
 
-Result:
+---
 
-``` text
-25
-```
-
-------------------------------------------------------------------------
-
-# Section 8 --- Quiz Project
+## Quiz Project
 
 The quiz project brings several concepts together.
 
 It uses:
 
--   Variables.
--   Data types.
--   Operators.
--   Conditional logic.
--   Functions.
--   DOM selection.
--   DOM updates.
--   User input.
+- Variables.
+- Data types.
+- Operators.
+- Conditional logic.
+- Functions.
+- DOM selection.
+- DOM updates.
+- User input.
 
-------------------------------------------------------------------------
+### Project Setup
 
-## Project Setup
-
-A simple project can contain:
-
-``` text
+```text
 quiz-project/
 ├── index.html
 ├── style.css
@@ -1621,7 +973,7 @@ quiz-project/
 
 HTML:
 
-``` html
+```html
 <p id="result"></p>
 <p id="message"></p>
 
@@ -1630,28 +982,16 @@ HTML:
 
 JavaScript:
 
-``` js
+```js
 const result = document.querySelector("#result");
 const score = 8;
 
 result.textContent = "Your score: " + score;
 ```
 
-------------------------------------------------------------------------
+### Conditional Result
 
-## Variables in the Quiz
-
-``` js
-let userAnswer = "B";
-```
-
-The variable stores the selected answer.
-
-------------------------------------------------------------------------
-
-## Conditional Result
-
-``` js
+```js
 const message = document.querySelector("#message");
 
 if (score >= 5) {
@@ -1661,9 +1001,9 @@ if (score >= 5) {
 }
 ```
 
-This demonstrates how JavaScript can combine:
+This demonstrates:
 
-``` text
+```text
 Variable
    ↓
 Condition
@@ -1673,34 +1013,47 @@ Decision
 DOM update
 ```
 
-------------------------------------------------------------------------
+### `getMultipleChoices`
 
-## `getMultipleChoices`
+A quiz application can use a function such as `getMultipleChoices` to obtain or process the multiple-choice options used by the quiz.
 
-A quiz application can use a function such as `getMultipleChoices` to
-obtain or process the multiple-choice options used by the quiz.
+The important concept is that functions allow repeated quiz logic to be organized into reusable blocks rather than writing the same code repeatedly.
 
-The important concept is that functions allow repeated quiz logic to be
-organized into reusable blocks rather than writing the same code
-repeatedly.
+Illustrative example:
 
-------------------------------------------------------------------------
+```js
+function getMultipleChoices(choices, count) {
+  const selected = [];
 
-# Section 9 --- Tic Tac Toe
+  while (selected.length < count) {
+    selected.push(choices[selected.length]);
+  }
 
-Tic Tac Toe demonstrates how several JavaScript concepts can work
-together:
+  return selected;
+}
 
--   Arrays.
--   Objects/functions when needed.
--   Events.
--   DOM manipulation.
--   User interaction.
--   Updating application state.
+const choices = ["A", "B", "C", "D"];
+const result = getMultipleChoices(choices, 3);
+
+console.log(result); // ["A", "B", "C"]
+```
+
+---
+
+## Tic Tac Toe
+
+Tic Tac Toe demonstrates how several JavaScript concepts work together:
+
+- Arrays.
+- Objects/functions when needed.
+- Events.
+- DOM manipulation.
+- User interaction.
+- Updating application state.
 
 A simple board can be represented by an array:
 
-``` js
+```js
 const board = [
   "", "", "",
   "", "", "",
@@ -1710,13 +1063,13 @@ const board = [
 
 The center square is index `4`.
 
-``` js
+```js
 board[4] = "X";
 ```
 
 The data now represents:
 
-``` text
+```text
 |   |   |   |
 |---|---|---|
 |   | X |   |
@@ -1724,13 +1077,9 @@ The data now represents:
 |   |   |   |
 ```
 
-------------------------------------------------------------------------
+Data and UI flow:
 
-## Data and UI
-
-A useful way to understand the Tic Tac Toe example is:
-
-``` text
+```text
 User clicks a square
         ↓
 JavaScript receives the event
@@ -1742,17 +1091,334 @@ The DOM is updated
 User sees the new board
 ```
 
-The array represents the application data, while the DOM represents what
-the user sees.
+The array represents the application data, while the DOM represents what the user sees.
 
-------------------------------------------------------------------------
+---
 
-# JavaScript + DOM Mental Model
+## Day 2: DOM, Objects, Functions, APIs, and Async JavaScript
 
-The most important idea in the course is the relationship between
-**data, logic, and the page**.
+Day 2 connects JavaScript logic to the DOM and introduces asynchronous work with timers and APIs.
 
-``` text
+### Day 2 Topics
+
+- Selecting an HTML element by ID.
+- Selecting elements by tag name.
+- Selecting elements by class name.
+- Using `.length` with DOM collections.
+- Reading and setting `.textContent`.
+- Understanding what happens to temporary DOM changes after refresh.
+- Understanding `Object.freeze()`.
+- Understanding missing function arguments.
+- Understanding the purpose of `getMultipleChoices`.
+- Using `setTimeout()`.
+- Understanding the Dog CEO API.
+- Extracting properties from API response objects.
+- Understanding promises, `fetch()`, and `await`.
+- Using object and array destructuring.
+- Naming an array after splitting a URL.
+- Splitting a Dog CEO image URL and reading a specific index.
+
+### `setTimeout()`
+
+`setTimeout()` schedules a callback function to run later. JavaScript continues executing synchronous code while the timer waits.
+
+```js
+console.log("first");
+
+setTimeout(() => {
+  console.log("third");
+}, 1000);
+
+console.log("second");
+```
+
+Typical output:
+
+```text
+first
+second
+third
+```
+
+The delay is measured in milliseconds:
+
+```js
+setTimeout(callback, 1000); // about one second
+```
+
+### Dog CEO API
+
+An API provides a way for an application to request data from another system.
+
+Example endpoint:
+
+```text
+https://dog.ceo/api/breed/hound/list
+```
+
+Example response:
+
+```json
+{
+  "message": [
+    "afghan",
+    "basset",
+    "blood",
+    "english",
+    "ibizan",
+    "plott",
+    "walker"
+  ],
+  "status": "success"
+}
+```
+
+Important parts:
+
+| Property | Meaning |
+| --- | --- |
+| `message` | Array of breeds |
+| `status` | Request status |
+
+### Promises, `fetch()`, and `await`
+
+Network requests take time, so `fetch()` returns a promise.
+
+```js
+const response = await fetch("https://dog.ceo/api/breed/hound/list");
+```
+
+The response is a `Response` object. Its body can be parsed as JSON:
+
+```js
+const body = await response.json();
+```
+
+`response.json()` also returns a promise, so `await` is used again.
+
+`await` is normally used inside an `async` function:
+
+```js
+async function fetchResponse(url) {
+  const response = await fetch(url);
+  return response;
+}
+```
+
+Overall flow:
+
+```text
+fetch(url)
+    ↓
+Promise
+    ↓
+await
+    ↓
+Response
+    ↓
+response.json()
+    ↓
+Promise
+    ↓
+await
+    ↓
+JavaScript data
+```
+
+### Destructuring
+
+Destructuring extracts values from objects or arrays into variables.
+
+#### Object Destructuring
+
+```js
+const data = {
+  id: 10,
+  name: "JavaScript"
+};
+
+const { id, name } = data;
+```
+
+Now:
+
+```text
+id   -> 10
+name -> "JavaScript"
+```
+
+Dog CEO example:
+
+```js
+const body = await response.json();
+const { message } = body;
+```
+
+Now `message` contains the array from the API response.
+
+#### Array Destructuring
+
+```js
+const [first, second, third] = ["A", "B", "C"];
+```
+
+Results:
+
+```text
+first  -> "A"
+second -> "B"
+third  -> "C"
+```
+
+You can skip values:
+
+```js
+const [, , third] = ["A", "B", "C"];
+```
+
+You can collect remaining values with rest syntax:
+
+```js
+const [first, ...rest] = ["A", "B", "C"];
+```
+
+Results:
+
+```text
+first -> "A"
+rest  -> ["B", "C"]
+```
+
+### Splitting a Dog CEO URL
+
+Given this URL:
+
+```text
+https://images.dog.ceo/breeds/poodle-standard
+```
+
+Using `.split("/")`:
+
+```js
+const url = "https://images.dog.ceo/breeds/poodle-standard";
+const parts = url.split("/");
+
+console.log(parts);
+```
+
+The resulting array is:
+
+| Index | Value |
+| --- | --- |
+| `0` | `"https:"` |
+| `1` | `""` |
+| `2` | `"images.dog.ceo"` |
+| `3` | `"breeds"` |
+| `4` | `"poodle-standard"` |
+
+The empty value at index `1` comes from the double slash in `https://`.
+
+Extract the breed:
+
+```js
+const breed = parts[4];
+
+console.log(breed); // "poodle-standard"
+```
+
+Naming the result something like `urlArray` can make it clear that the variable now contains an array rather than the original string.
+
+```js
+const urlArray = url.split("/");
+```
+
+### Complete Day 2 Example
+
+HTML:
+
+```html
+<h1 id="title">Doggo Fetch</h1>
+<button id="loadButton">Load Breeds</button>
+<p id="status"></p>
+<ul id="breeds"></ul>
+```
+
+JavaScript:
+
+```js
+const title = document.getElementById("title");
+const button = document.getElementById("loadButton");
+const status = document.getElementById("status");
+const breedsList = document.getElementById("breeds");
+
+title.textContent = "Dog Breeds";
+
+async function loadBreeds() {
+  status.textContent = "Loading...";
+
+  const response = await fetch("https://dog.ceo/api/breed/hound/list");
+  const body = await response.json();
+  const { message } = body;
+
+  status.textContent = `${message.length} breeds found.`;
+  breedsList.textContent = "";
+
+  for (const breed of message) {
+    const li = document.createElement("li");
+    li.textContent = breed;
+    breedsList.appendChild(li);
+  }
+}
+
+button.addEventListener("click", loadBreeds);
+```
+
+Flow:
+
+1. Select elements from the DOM.
+2. User clicks the button.
+3. The async function starts.
+4. `fetch()` requests API data.
+5. `await` waits for the promise.
+6. `response.json()` parses the response body.
+7. Destructuring extracts `message`.
+8. `.length` counts the breeds.
+9. `.textContent` updates the page.
+10. The breeds are added to the DOM.
+
+### Final Day 2 Mental Model
+
+```text
+HTML
+  ↓
+DOM
+  ↓
+Select elements
+  ↓
+Read / change content
+  ↓
+Functions organize logic
+  ↓
+setTimeout / async operations happen later
+  ↓
+fetch() requests API data
+  ↓
+await waits for Promises
+  ↓
+Destructuring extracts useful data
+  ↓
+DOM is updated with the result
+  ↓
+Interactive web page
+```
+
+---
+
+## JavaScript + DOM Mental Model
+
+The most important idea in the course is the relationship between data, logic, and the page.
+
+```text
              JavaScript
                  │
        ┌─────────┼─────────┐
@@ -1767,13 +1433,13 @@ The most important idea in the course is the relationship between
           Interactive Page
 ```
 
-------------------------------------------------------------------------
+---
 
-# Quick Reference
+## Quick Reference
 
-## DOM
+### DOM
 
-``` js
+```js
 document.querySelector("h1");
 document.querySelectorAll("p");
 document.getElementById("title");
@@ -1781,24 +1447,24 @@ document.getElementsByTagName("li");
 document.getElementsByClassName("card");
 ```
 
-## DOM Content
+### DOM Content
 
-``` js
+```js
 element.textContent;
 element.textContent = "New text";
 ```
 
-## Events
+### Events
 
-``` js
+```js
 element.addEventListener("click", function () {
   // action
 });
 ```
 
-## Data Types
+### Data Types
 
-``` js
+```js
 typeof "text";
 typeof 42;
 typeof true;
@@ -1806,9 +1472,9 @@ typeof undefined;
 typeof null;
 ```
 
-## Strings
+### Strings
 
-``` js
+```js
 text.length;
 text[0];
 text.indexOf("x");
@@ -1817,24 +1483,24 @@ text.startsWith("x");
 text.toLowerCase();
 ```
 
-## Operators
+### Operators
 
-``` js
+```js
 +  -  *  /  %  **
 >  <  >=  <=
 === !==
 ```
 
-## Variables
+### Variables
 
-``` js
+```js
 let age = 20;
 const name = "Ali";
 ```
 
-## Arrays
+### Arrays
 
-``` js
+```js
 array[0];
 array.length;
 array.push(value);
@@ -1846,23 +1512,19 @@ array.join("-");
 array.slice(0, 2);
 ```
 
-## Objects
+### Objects
 
-``` js
+```js
 object.property;
 object.property = value;
 object.newProperty = value;
+Object.freeze(object);
+Object.isFrozen(object);
 ```
 
-## Methods
+### Methods and `this`
 
-``` js
-object.method();
-```
-
-## `this`
-
-``` js
+```js
 const user = {
   name: "Ali",
 
@@ -1870,15 +1532,53 @@ const user = {
     console.log(this.name);
   }
 };
+
+user.greet();
 ```
 
-------------------------------------------------------------------------
+### Functions
 
-# Common Beginner Mistakes
+```js
+function greet(name) {
+  console.log("Hello " + name);
+}
 
-## 1. Forgetting that array indexes start at 0
+greet("Reem");
+```
 
-``` js
+### Timer
+
+```js
+setTimeout(callback, 1000);
+```
+
+### Fetch and JSON
+
+```js
+const response = await fetch(url);
+const body = await response.json();
+```
+
+### Destructuring
+
+```js
+const { message } = body;
+const [first, second] = array;
+```
+
+### String Splitting
+
+```js
+const parts = url.split("/");
+```
+
+---
+
+## Common Beginner Mistakes
+
+### 1. Forgetting That Array Indexes Start at 0
+
+```js
 const fruits = ["apple", "banana", "cherry"];
 
 fruits[0]; // apple
@@ -1886,29 +1586,25 @@ fruits[1]; // banana
 fruits[2]; // cherry
 ```
 
-------------------------------------------------------------------------
+### 2. Confusing `=` with `===`
 
-## 2. Confusing `=` with `===`
+`=` is used for assignment.
 
-``` js
-=
+```js
+let score = 10;
 ```
 
-is used for assignment.
+`===` is used for strict equality comparison.
 
-``` js
-===
+```js
+score === 10;
 ```
 
-is used for strict equality comparison.
-
-------------------------------------------------------------------------
-
-## 3. Thinking `const` makes an array immutable
+### 3. Thinking `const` Makes an Array or Object Immutable
 
 This is allowed:
 
-``` js
+```js
 const numbers = [1, 2];
 
 numbers.push(3);
@@ -1916,30 +1612,28 @@ numbers.push(3);
 
 But this is not:
 
-``` js
+```js
 numbers = [4, 5];
 ```
 
-------------------------------------------------------------------------
+Use `Object.freeze()` when you want to prevent changes to an object's own properties.
 
-## 4. Forgetting that objects and arrays are reference values
+### 4. Forgetting That Objects and Arrays Are Reference Values
 
-``` js
+```js
 let a = [1, 2, 3];
 let b = a;
 
 b[0] = 99;
 
-console.log(a);
+console.log(a); // [99, 2, 3]
 ```
 
 `a` is also changed because both variables refer to the same array.
 
-------------------------------------------------------------------------
+### 5. Selecting an Element That Does Not Exist
 
-## 5. Selecting an element that does not exist
-
-``` js
+```js
 const button = document.querySelector("#submit-btn");
 ```
 
@@ -1947,134 +1641,144 @@ If the page does not contain that element, `button` can be `null`.
 
 Always make sure the selector matches an existing HTML element.
 
-------------------------------------------------------------------------
+### 6. Forgetting That Missing Function Arguments Become `undefined`
 
-# Practice Checklist
+```js
+function add(a, b) {
+  return a + b;
+}
 
-Use this checklist to review the course.
+add(5); // b is undefined, result is NaN
+```
+
+### 7. Forgetting That `response.json()` Also Needs `await`
+
+```js
+const response = await fetch(url);
+const body = await response.json();
+```
+
+Both `fetch()` and `response.json()` return promises.
+
+---
+
+## Practice Checklist
 
 ### JavaScript Basics
 
--   [ ] I can explain what JavaScript is.
--   [ ] I can run JavaScript in the browser console.
--   [ ] I know how to connect an external `.js` file.
+- [ ] I can explain what JavaScript is.
+- [ ] I can run JavaScript in the browser console.
+- [ ] I know how to connect an external `.js` file.
 
 ### DOM
 
--   [ ] I can use `querySelector()`.
--   [ ] I can use `querySelectorAll()`.
--   [ ] I can use `getElementById()`.
--   [ ] I understand `.length`.
--   [ ] I can read and change `.textContent`.
--   [ ] I can respond to a click with `addEventListener()`.
+- [ ] I can use `querySelector()`.
+- [ ] I can use `querySelectorAll()`.
+- [ ] I can use `getElementById()`.
+- [ ] I can use `getElementsByTagName()`.
+- [ ] I can use `getElementsByClassName()`.
+- [ ] I understand `.length` for DOM collections.
+- [ ] I can read and change `.textContent`.
+- [ ] I can respond to a click with `addEventListener()`.
+- [ ] I understand why a temporary DOM change normally disappears after refresh.
 
 ### Data Types
 
--   [ ] I know string, number, boolean, undefined, and null.
--   [ ] I can use `typeof`.
--   [ ] I understand the `typeof null === "object"` behavior.
+- [ ] I know string, number, boolean, undefined, and null.
+- [ ] I can use `typeof`.
+- [ ] I understand the `typeof null === "object"` behavior.
 
 ### Operators
 
--   [ ] I can perform arithmetic.
--   [ ] I understand `%`.
--   [ ] I understand `==` vs `===`.
--   [ ] I understand `!=` vs `!==`.
+- [ ] I can perform arithmetic.
+- [ ] I understand `%`.
+- [ ] I understand `==` vs `===`.
+- [ ] I understand `!=` vs `!==`.
 
 ### Variables and Expressions
 
--   [ ] I understand declaration and assignment.
--   [ ] I know when to use `let`.
--   [ ] I know when to use `const`.
--   [ ] I can distinguish expressions from statements.
+- [ ] I understand declaration and assignment.
+- [ ] I know when to use `let`.
+- [ ] I know when to use `const`.
+- [ ] I can distinguish expressions from statements.
 
 ### Arrays
 
--   [ ] I know that indexes start at 0.
--   [ ] I can use `push()` and `pop()`.
--   [ ] I can use `shift()` and `unshift()`.
--   [ ] I can use `includes()`.
--   [ ] I can use `join()`.
--   [ ] I understand `slice()`.
--   [ ] I understand shared references.
--   [ ] I understand that `const` does not freeze an array.
+- [ ] I know that indexes start at `0`.
+- [ ] I can use `push()` and `pop()`.
+- [ ] I can use `shift()` and `unshift()`.
+- [ ] I can use `includes()`.
+- [ ] I can use `join()`.
+- [ ] I understand `slice()`.
+- [ ] I understand shared references.
+- [ ] I understand that `const` does not freeze an array.
+- [ ] I can use array destructuring.
 
 ### Objects
 
--   [ ] I can create an object.
--   [ ] I can access properties.
--   [ ] I can modify properties.
--   [ ] I can add properties.
--   [ ] I understand methods.
--   [ ] I understand `this`.
--   [ ] I can access nested objects and arrays.
--   [ ] I understand `Object.freeze()`.
+- [ ] I can create an object.
+- [ ] I can access properties.
+- [ ] I can modify properties.
+- [ ] I can add properties.
+- [ ] I understand methods.
+- [ ] I understand `this`.
+- [ ] I can access nested objects and arrays.
+- [ ] I understand `Object.freeze()`.
+- [ ] I understand the difference between `const` and `Object.freeze()`.
+- [ ] I understand shallow freeze.
+- [ ] I can use object destructuring.
 
 ### Functions
 
--   [ ] I can declare a function.
--   [ ] I can call a function.
--   [ ] I understand parameters and arguments.
--   [ ] I understand `return`.
--   [ ] I know what happens when an argument is missing.
+- [ ] I can declare a function.
+- [ ] I can call a function.
+- [ ] I understand parameters and arguments.
+- [ ] I understand `return`.
+- [ ] I know what happens when an argument is missing.
+- [ ] I understand the purpose of `getMultipleChoices` and its while-loop idea.
+
+### Asynchronous JavaScript and APIs
+
+- [ ] I understand what `setTimeout()` does.
+- [ ] I understand why `fetch()` returns a promise.
+- [ ] I can use `await` inside an `async` function.
+- [ ] I can parse a response with `response.json()`.
+- [ ] I can extract a property with object destructuring.
+- [ ] I can split a URL with `.split("/")`.
+- [ ] I understand the indexes in the Dog CEO URL example.
 
 ### Projects
 
--   [ ] I can connect JavaScript to HTML.
--   [ ] I can update a page based on a variable.
--   [ ] I can use a condition to display a result.
--   [ ] I understand the basic data flow of a quiz.
--   [ ] I understand how Tic Tac Toe can store board state in an array.
+- [ ] I can connect JavaScript to HTML.
+- [ ] I can update a page based on a variable.
+- [ ] I can use a condition to display a result.
+- [ ] I understand the basic data flow of a quiz.
+- [ ] I understand how Tic Tac Toe can store board state in an array.
+- [ ] I can combine DOM selection, functions, async code, API data, and DOM updates.
 
-------------------------------------------------------------------------
+---
 
-# Final Summary
+## Final Summary
 
-  -----------------------------------------------------------------------
-  Section                             Main Idea
-  ----------------------------------- -----------------------------------
-  Getting Started                     JavaScript adds behavior and
-                                      interactivity to web pages
-
-  DOM                                 JavaScript can read and change HTML
-                                      elements
-
-  Values & Data Types                 JavaScript works with different
-                                      types of values
-
-  Strings                             Text values provide useful
-                                      properties and methods
-
-  Operators                           Operators perform calculations and
-                                      comparisons
-
-  Expressions                         Expressions produce values
-
-  Variables                           Variables provide named references
-                                      to values
-
-  Arrays                              Arrays store ordered collections of
-                                      values
-
-  Mutability                          `const` protects reassignment, not
-                                      the contents of arrays/objects
-
-  Objects                             Objects group related data through
-                                      properties
-
-  Methods                             Functions stored on objects are
-                                      methods
-
-  `this`                              `this` can refer to the object used
-                                      to call a method
-
-  Functions                           Functions organize reusable logic
-
-  Quiz Project                        Combines variables, logic,
-                                      functions, and DOM manipulation
-
-  Tic Tac Toe                         Demonstrates state, events, arrays,
-                                      and DOM updates
-  -----------------------------------------------------------------------
-
-
+| Section | Main Idea |
+| --- | --- |
+| Getting Started | JavaScript adds behavior and interactivity to web pages |
+| DOM | JavaScript can read and change HTML elements |
+| Values and Data Types | JavaScript works with different types of values |
+| Strings | Text values provide useful properties and methods |
+| Operators | Operators perform calculations and comparisons |
+| Expressions | Expressions produce values |
+| Variables | Variables provide named references to values |
+| Arrays | Arrays store ordered collections of values |
+| Mutability | `const` protects reassignment, not array/object contents |
+| Objects | Objects group related data through properties |
+| Methods | Functions stored on objects are methods |
+| `this` | `this` can refer to the object used to call a method |
+| Functions | Functions organize reusable logic |
+| Quiz Project | Combines variables, logic, functions, and DOM manipulation |
+| Tic Tac Toe | Demonstrates state, events, arrays, and DOM updates |
+| Timers | `setTimeout()` schedules work for later |
+| APIs | APIs let JavaScript request data from another system |
+| Promises | Promises represent values that may be available later |
+| `fetch()` and `await` | Used to request and wait for API data |
+| Destructuring | Extracts useful values from objects and arrays |
