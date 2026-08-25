@@ -1,8 +1,5 @@
 # JavaScript First Steps - Day 3
 
-A detailed learning guide for Day 3 of JavaScript First Steps, based on the attached course materials, the JavaScript First Steps companion site, and MDN Web Docs.
-
-Day 3 connects earlier JavaScript fundamentals to real browser projects. The main focus is working with events, loops, array methods, asynchronous JavaScript, APIs, promises, `fetch()`, `await`, destructuring, modules, and debugging.
 
 ## Table of Contents
 
