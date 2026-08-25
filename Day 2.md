@@ -2,8 +2,6 @@
 
 A detailed guide for Day 2, focused on **Functions, Scope, Events, Conditionals, Loops, and the Quiz Project**.
 
-> **Day 2 starts with Functions.** DOM/Object fundamentals from the previous README are not repeated here.
-
 ## Table of Contents
 
 1. [Functions](#1-functions)
